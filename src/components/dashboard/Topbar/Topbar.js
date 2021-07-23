@@ -6,33 +6,25 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import {useStyles} from './style'
-import Sidebar from "react-sidebar";
 import dashboardIcon from '../../../images/dashBoardIcon.svg'
 import settingIcon from '../../../images/settingIcon.svg'
 import AvatarImage from '../../../images/avatar.png'
-import SidebarContent from './SidebarContent/Sidebar'
-import Main from "../Main/Main";
+import {useDispatch,useSelector} from "react-redux";
+import {setSideBarToggle} from '../../../store/action/action';
+
 export default function TopBar({logo}) {
-    const theme = useTheme();
+    const dispatch = useDispatch();
+    let {open} = useSelector(({sideBarToggle}) => sideBarToggle);
 
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-    const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-    const [open, setOpen] = React.useState(false);
 
     const toggleDrawer = event => {
-        if (
-            event.type === "keydown" &&
-            (event.key === "Tab" || event.key === "Shift")
-        ) {
-            return;
-        }
-
-        setOpen(!open);
+        dispatch(setSideBarToggle(!open));
     };
     const handleProfileMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -158,16 +150,7 @@ export default function TopBar({logo}) {
             </AppBar>
             {renderMobileMenu}
             {renderMenu}
-            <Sidebar
-                sidebar={<SidebarContent/>}
-                open={open}
-                onSetOpen={toggleDrawer}
-                docked={isMdUp}
-                shadow={false}
-                styles={{ sidebar: { background: "#F6F8F9",marginTop:70,width:260,padding:'45px 20px',overflow:"auto"}}}
-            >
-               <Main/>
-            </Sidebar>
+
         </div>
     );
 }
