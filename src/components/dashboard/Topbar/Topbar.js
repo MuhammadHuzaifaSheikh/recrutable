@@ -70,20 +70,17 @@ export default function TopBar({logo}) {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <IconButton aria-label="show 4 new mails" color="inherit">
-                    <Badge badgeContent={4} color="secondary">
-                        <MailIcon />
-                    </Badge>
+                <IconButton color="inherit">
+                    <NotificationsIcon style={{color:'grey'}} />
                 </IconButton>
-                <p>Messages</p>
-            </MenuItem>
+                <p>Notification</p>
+
+          </MenuItem>
             <MenuItem>
-                <IconButton aria-label="show 11 new notifications" color="inherit">
-                    <Badge badgeContent={11} color="secondary">
-                        <NotificationsIcon />
-                    </Badge>
+                <IconButton color="inherit">
+                    <img src={settingIcon} alt="icon"/>
                 </IconButton>
-                <p>Notifications</p>
+                <p>Setting</p>
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
                 <IconButton
@@ -143,7 +140,7 @@ export default function TopBar({logo}) {
                             onClick={handleMobileMenuOpen}
                             color="inherit"
                         >
-                            <MoreIcon />
+                            <MoreIcon style={{color:"grey"}} />
                         </IconButton>
                     </div>
                 </Toolbar>
