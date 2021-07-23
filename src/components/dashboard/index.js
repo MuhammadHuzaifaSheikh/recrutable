@@ -8,18 +8,17 @@ import {useDispatch, useSelector} from "react-redux";
 import {useMediaQuery} from "@material-ui/core";
 import {setSideBarToggle} from "../../store/action/action";
 import {useTheme} from "@material-ui/core/styles";
-
+import {profile_img,first_name} from '../../data/userData.json'
 
 export default function PrimarySearchAppBar() {
     const theme = useTheme();
-
     const dispatch = useDispatch();
     const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
 
     let {open} = useSelector(({sideBarToggle}) => sideBarToggle);
     return (
         <div style={{flexGrow:1}}>
-           <TopBar logo={LOGO}/>
+           <TopBar profileImage={profile_img} username={first_name} logo={LOGO}/>
             <Sidebar
                 sidebar={<SidebarContent/>}
                 open={open}

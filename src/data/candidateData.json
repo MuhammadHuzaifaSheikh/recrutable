@@ -1,0 +1,232 @@
+{
+  "candidates": [
+    {
+      "id": "12",
+      "first_name": "Moin",
+      "last_name": "Khan",
+      "profile_img": "https://capital-placement.com/wp-content/uploads/2021/05/Ashiklal-Pyarilal.jpeg",
+      "designation": "Full Stack Developer",
+      "city": "Kannur",
+      "state": "Kerala",
+      "country": "India",
+      "expected_salary": "Open to Negotiation",
+      "latest_education": "MSc Computer Science",
+      "latest_education_start_year": "2018-2021",
+      "latest_education_end_year": "2018-2021",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery",
+        ".NET Core"
+      ]
+    },
+    {
+      "id": "13",
+      "first_name": "Andriána",
+      "last_name": "Sotirisi",
+      "profile_img": "https://capital-placement.com/wp-content/uploads/2021/05/andrianasotiris.jpeg",
+      "designation": "Frontend Developer",
+      "city": "Colombo",
+      "state": "Western",
+      "country": "Sri Lanka",
+      "expected_salary": "Open to Negotiation",
+      "latest_education": "MSc Computer Science",
+      "latest_education_start_year": "2018-2021",
+      "latest_education_end_year": "2018-2021",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "React",
+        "Redux"
+      ]
+    },
+    {
+      "id": "1",
+      "first_name": "Claudie",
+      "last_name": "Veness",
+      "email": "cveness0@newsvine.com",
+      "gender": "Agender",
+      "profile_img": "https://robohash.org/hicquiut.png?size=100x100&set=set1",
+      "city": "Hangwula",
+      "state": null,
+      "country": "China",
+      "latest_education": "MSc Computer Science",
+      "expected_salary": "Open to Negotiation",
+      "latest_education_start_year": "2018-2021",
+      "latest_education_end_year": "2018-2021",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery",
+        ".NET Core"
+      ]
+    },
+    {
+      "id": "2",
+      "first_name": "Charita",
+      "last_name": "Cane",
+      "email": "ccane1@123-reg.co.uk",
+      "gender": "Non-binary",
+      "profile_img": "https://robohash.org/sequiofficiadolor.png?size=100x100&set=set1",
+      "city": "Quebradas",
+      "state": "Lisboa",
+      "country": "Portugal",
+      "latest_education": "MSc Computer Science",
+      "expected_salary": "Open to Negotiation",
+      "latest_education_start_year": "2018-2021",
+      "latest_education_end_year": "2018-2021",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "React",
+        "Redux"
+      ]
+    },
+    {
+      "id": "3",
+      "first_name": "Cristal",
+      "last_name": "Girkin",
+      "email": "cgirkin2@slideshare.net",
+      "gender": "Genderqueer",
+      "profile_img": "https://robohash.org/solutavoluptatibusiusto.png?size=100x100&set=set1",
+      "city": "Nichinan",
+      "state": null,
+      "country": "Japan",
+      "latest_education": "MSc Computer Science",
+      "expected_salary": "Open to Negotiation",
+      "latest_education_start_year": "2018-2021",
+      "latest_education_end_year": "2018-2021",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery",
+        ".NET Core"
+      ]
+    },
+    {
+      "id": "4",
+      "first_name": "Arlee",
+      "last_name": "Carroll",
+      "email": "acarroll3@livejournal.com",
+      "gender": "Non-binary",
+      "profile_img": "https://robohash.org/ipsamexpeditadolorem.png?size=100x100&set=set1",
+      "city": "Nusajaya",
+      "state": "Johor",
+      "country": "Malaysia",
+      "latest_education": "MSc Computer Science",
+      "expected_salary": "Open to Negotiation",
+      "latest_education_start_year": "2018-2021",
+      "latest_education_end_year": "2018-2021",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "React",
+        "Redux"
+      ]
+    },
+    {
+      "id": "5",
+      "first_name": "Jaymie",
+      "last_name": "McClunaghan",
+      "email": "jmcclunaghan4@npr.org",
+      "gender": "Genderfluid",
+      "profile_img": "https://robohash.org/delectusnamvoluptate.png?size=100x100&set=set1",
+      "city": "Mihara",
+      "state": null,
+      "country": "Japan",
+      "latest_education": "MSc Computer Science",
+      "expected_salary": "Open to Negotiation",
+      "latest_education_start_year": "2018-2021",
+      "latest_education_end_year": "2018-2021",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery",
+        ".NET Core"
+      ]
+    },
+    {
+      "id": "6",
+      "first_name": "Mariann",
+      "last_name": "Guiden",
+      "email": "mguiden5@prnewswire.com",
+      "gender": "Bigender",
+      "profile_img": "https://robohash.org/errorreiciendiseligendi.png?size=100x100&set=set1",
+      "city": "San Quintin",
+      "state": null,
+      "country": "Philippines",
+      "expected_salary": "Open to Negotiation",
+      "latest_education": "MSc Computer Science",
+      "latest_education_start_year": "2018-2021",
+      "latest_education_end_year": "2018-2021",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "React",
+        "Redux"
+      ]
+    },
+    {
+      "id": "7",
+      "first_name": "Damian",
+      "last_name": "Beales",
+      "email": "dbeales6@amazonaws.com",
+      "gender": "Agender",
+      "profile_img": "https://robohash.org/explicabovelitaspernatur.png?size=100x100&set=set1",
+      "city": "Wurigelebur",
+      "state": null,
+      "country": "Indonesia",
+      "expected_salary": "Open to Negotiation",
+      "latest_education": "MSc Computer Science",
+      "latest_education_start_year": "2018-2021",
+      "latest_education_end_year": "2018-2021",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery",
+        ".NET Core"
+      ]
+    },
+    {
+      "id": "8",
+      "first_name": "Anjela",
+      "last_name": "Climson",
+      "email": "aclimson7@msn.com",
+      "gender": "Non-binary",
+      "profile_img": "https://robohash.org/porroducimusperspiciatis.png?size=100x100&set=set1",
+      "city": "San Antonio",
+      "state": "Mexico",
+      "country": "Mexico",
+      "expected_salary": "Open to Negotiation",
+      "latest_education": "MSc Computer Science",
+      "latest_education_start_year": "2018-2021",
+      "latest_education_end_year": "2018-2021",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "React",
+        "Redux"
+      ]
+    }
+  ]
+}

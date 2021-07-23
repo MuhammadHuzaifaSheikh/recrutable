@@ -1,7 +1,7 @@
 import {SideBar_Toggle} from '../constant/ActionTypes';
 
 const INITIAL_STATE = {
-    open: true,
+    open: false,
 };
 
 

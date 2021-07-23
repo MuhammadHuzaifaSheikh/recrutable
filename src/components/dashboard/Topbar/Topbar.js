@@ -5,14 +5,14 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import SettingsIcon from '@material-ui/icons/Settings';
 import {useStyles} from './style'
 import dashboardIcon from '../../../images/dashBoardIcon.svg'
 import settingIcon from '../../../images/settingIcon.svg'
-import AvatarImage from '../../../images/avatar.png'
 import {useDispatch,useSelector} from "react-redux";
 import {setSideBarToggle} from '../../../store/action/action';
 
-export default function TopBar({logo}) {
+export default function TopBar({logo,profileImage,username}) {
     const dispatch = useDispatch();
     let {open} = useSelector(({sideBarToggle}) => sideBarToggle);
 
@@ -70,17 +70,18 @@ export default function TopBar({logo}) {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <IconButton color="inherit">
-                    <NotificationsIcon style={{color:'grey'}} />
-                </IconButton>
-                <p>Notification</p>
-
-          </MenuItem>
-            <MenuItem>
-                <IconButton color="inherit">
-                    <img src={settingIcon} alt="icon"/>
+                <IconButton aria-label="show 4 new mails" color="inherit">
+                        <SettingsIcon />
                 </IconButton>
                 <p>Setting</p>
+            </MenuItem>
+            <MenuItem>
+                <IconButton aria-label="show 11 new notifications" color="inherit">
+                    <Badge badgeContent={11} color="secondary">
+                        <NotificationsIcon />
+                    </Badge>
+                </IconButton>
+                <p>Notifications</p>
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
                 <IconButton
@@ -89,7 +90,8 @@ export default function TopBar({logo}) {
                     aria-haspopup="true"
                     color="inherit"
                 >
-                    <AccountCircle />
+                    {profileImage?<Avatar  alt={username} src={profileImage}/>:<AccountCircle/>}
+
                 </IconButton>
                 <p>Profile</p>
             </MenuItem>
@@ -129,7 +131,7 @@ export default function TopBar({logo}) {
                             onClick={handleProfileMenuOpen}
                             color="inherit"
                         >
-                            <Avatar src={AvatarImage}/>
+                            {profileImage?<Avatar  alt={username} src={profileImage}/>:<AccountCircle/>}
                         </IconButton>
                     </div>
                     <div className={classes.sectionMobile}>

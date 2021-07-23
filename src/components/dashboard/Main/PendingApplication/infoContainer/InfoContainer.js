@@ -1,7 +1,7 @@
 import {Card, CardContent, Typography, useMediaQuery} from "@material-ui/core";
 import {useStyles} from "./style";
 import {useTheme} from "@material-ui/core/styles";
-export default function InfoContainer({active,title}) {
+export default function InfoContainer({active,title,number}) {
     const theme = useTheme();
     const classes = useStyles();
 
@@ -12,7 +12,7 @@ export default function InfoContainer({active,title}) {
                 <Card style={active?{background:'#ED2147'}:{}} className="infoBox_main">
                     <CardContent>
                         <Typography className={active?classes.infoBoxNumberActive:classes.infoBoxNumber}>
-                            10
+                            {number?number:'NA'}
                         </Typography>
                         <Typography className={active?classes.infoBox_textActive:classes.infoBox_text}>
                             {title}
