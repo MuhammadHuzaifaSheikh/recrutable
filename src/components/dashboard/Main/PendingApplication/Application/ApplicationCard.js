@@ -17,8 +17,7 @@ export default function ApplicationsCard({name,designation,profile_img,city,stat
         <div className="ApplicationsCard_main">
             <div className="userInfo_Div">
                 <div>
-                    <Avatar className={classes.avatar} alt={name?name:"Name"}
-                            src={profile_img}/>
+                    <Avatar className={classes.avatar} alt={name?name:"Name"} src={profile_img}/>
                 </div>
                 <div className="userInfo_name">
                     <h2>{name?name:"User Name"}</h2>
@@ -47,16 +46,11 @@ export default function ApplicationsCard({name,designation,profile_img,city,stat
 
                 <div className="applicationCard_center_div3">
                     <div>
-                        <Button style={{
-                            color: "#24AEE4",
-                            fontWeight: 600,
-                            borderColor: '#24AEE4',
-                            textTransform: "capitalize"
-                        }} variant="outlined">View Application</Button>
+                        <Button style={{color: "#24AEE4", borderColor: '#24AEE4',}} variant="outlined">View Application</Button>
                     </div>
                     <div className="acceptBtn">
                         <Button
-                            style={{color: "#fff", fontWeight: 600, background: '#24AEE4', textTransform: "capitalize"}}
+                            style={{color: "#fff", background: '#24AEE4',}}
                             variant="contained">Accept</Button>
                     </div>
                 </div>
@@ -67,18 +61,17 @@ export default function ApplicationsCard({name,designation,profile_img,city,stat
             </div>
 
             <div className="tags">
-                {/*<div className="tags1">*/}
-                {/*    {tags.sclice(0,2).map((item,index)=>{*/}
-                {/*        return  <p key={index}>{item}</p>*/}
-                {/*    })}*/}
+                <div className="tags1">
+                    {tags.slice(0,3).map((item,index)=>{
+                        return  <p key={index}>{item}</p>
+                    })}
+                </div>
+                <div className="tags2">
+                    {tags.slice(3,6).map((item,index)=>{
+                        return  <p key={index}>{item}</p>
+                    })}
 
-                {/*</div>*/}
-                {/*<div className="tags2">*/}
-                {/*    {tags.sclice(3,5).map((item,index)=>{*/}
-                {/*        return  <p key={index}>{item}</p>*/}
-                {/*    })}*/}
-
-                {/*</div>*/}
+                </div>
             </div>
 
 

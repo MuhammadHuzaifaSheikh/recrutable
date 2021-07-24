@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './style.css'
 import sidebarMainDashboardIcon from '../../../../images/sidebarMainDashboardIcon.svg'
-import {List, ListItem, Collapse, ListItemIcon, ListItemText} from "@material-ui/core";
+import {List, ListItem, Collapse} from "@material-ui/core";
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import {jobData,otherItems} from "./SidebarData";

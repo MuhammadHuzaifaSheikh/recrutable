@@ -85,6 +85,8 @@
 }
 .applicationCard_center_div3 button{
     margin-left:10px ;
+    text-transform: capitalize;
+    font-weight: 600;
 }
 .divider{
     margin:20px;

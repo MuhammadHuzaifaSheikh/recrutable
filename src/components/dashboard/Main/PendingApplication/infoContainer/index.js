@@ -1,6 +1,5 @@
 import {Grid, useMediaQuery} from "@material-ui/core";
 import InfoContainer from "./InfoContainer";
-import React, {useEffect, useState} from "react";
 import {useTheme} from "@material-ui/core/styles";
 import {useStyles} from "../../../Topbar/style";
 import {applicantions} from '../../../../../data/applicationsData.json'
@@ -13,9 +12,6 @@ export default function InfoContainerMain({data}) {
     const theme = useTheme();
     const dispatch = useDispatch();
     const classes = useStyles();
-
-
-
     const isXs = useMediaQuery(theme.breakpoints.down("xs"));
     return (
         <div className={classes.infoContainerMain}>

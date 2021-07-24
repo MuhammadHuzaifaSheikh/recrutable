@@ -1,4 +1,4 @@
-import {Card, CardContent, Typography, useMediaQuery} from "@material-ui/core";
+import {Card, CardContent, Typography} from "@material-ui/core";
 import {useStyles} from "./style";
 export default function InfoContainer({active,title,number,onClick}) {
     const classes = useStyles();

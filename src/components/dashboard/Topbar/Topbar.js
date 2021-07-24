@@ -1,8 +1,6 @@
 import React from 'react';
-import {useTheme } from '@material-ui/core/styles';
-import {useMediaQuery, AppBar, Toolbar, IconButton, Typography, Badge, MenuItem, Menu, Avatar} from "@material-ui/core";
+import { AppBar, Toolbar, IconButton, Typography, Badge, MenuItem, Menu, Avatar} from "@material-ui/core";
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import SettingsIcon from '@material-ui/icons/Settings';
@@ -15,7 +13,6 @@ import {setSideBarToggle} from '../../../store/action/action';
 export default function TopBar({logo,profileImage,username}) {
     const dispatch = useDispatch();
     let {open} = useSelector(({sideBarToggle}) => sideBarToggle);
-
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -23,36 +20,20 @@ export default function TopBar({logo,profileImage,username}) {
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-    const toggleDrawer = event => {
-        dispatch(setSideBarToggle(!open));
-    };
-    const handleProfileMenuOpen = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleMobileMenuClose = () => {
-        setMobileMoreAnchorEl(null);
-    };
+    const toggleDrawer = event =>   dispatch(setSideBarToggle(!open));
+    const handleProfileMenuOpen = (event) =>  setAnchorEl(event.currentTarget);
+    const handleMobileMenuClose = () =>   setMobileMoreAnchorEl(null);
 
     const handleMenuClose = () => {
         setAnchorEl(null);
         handleMobileMenuClose();
     };
+    const handleMobileMenuOpen = (event) =>    setMobileMoreAnchorEl(event.currentTarget);
 
-    const handleMobileMenuOpen = (event) => {
-        setMobileMoreAnchorEl(event.currentTarget);
-    };
+
     const menuId = 'primary-search-account-menu';
     const renderMenu = (
-        <Menu
-            anchorEl={anchorEl}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-            id={menuId}
-            keepMounted
-            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-            open={isMenuOpen}
-            onClose={handleMenuClose}
-        >
+        <Menu anchorEl={anchorEl} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} id={menuId} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'right' }} open={isMenuOpen} onClose={handleMenuClose}>
             <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
             <MenuItem onClick={handleMenuClose}>My account</MenuItem>
         </Menu>
@@ -60,15 +41,7 @@ export default function TopBar({logo,profileImage,username}) {
 
     const mobileMenuId = 'primary-search-account-menu-mobile';
     const renderMobileMenu = (
-        <Menu
-            anchorEl={mobileMoreAnchorEl}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-            id={mobileMenuId}
-            keepMounted
-            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-            open={isMobileMenuOpen}
-            onClose={handleMobileMenuClose}
-        >
+        <Menu anchorEl={mobileMoreAnchorEl} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} id={mobileMenuId} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'right' }} open={isMobileMenuOpen} onClose={handleMobileMenuClose}>
             <MenuItem>
                 <IconButton aria-label="show 4 new mails" color="inherit">
                         <SettingsIcon />
@@ -84,14 +57,8 @@ export default function TopBar({logo,profileImage,username}) {
                 <p>Notifications</p>
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
-                <IconButton
-                    aria-label="account of current user"
-                    aria-controls="primary-search-account-menu"
-                    aria-haspopup="true"
-                    color="inherit"
-                >
+                <IconButton aria-label="account of current user" aria-controls={mobileMenuId} aria-haspopup="true" color="inherit">
                     {profileImage?<Avatar  alt={username} src={profileImage}/>:<AccountCircle/>}
-
                 </IconButton>
                 <p>Profile</p>
             </MenuItem>
@@ -102,13 +69,7 @@ export default function TopBar({logo,profileImage,username}) {
         <div>
             <AppBar style={{height:70,display:'flex',justifyContent:'center',background:'#fff',borderBottom:'1px solid #E5E9EB'}} elevation={0}  position="fixed">
                 <Toolbar>
-                    <IconButton
-                        onClick={toggleDrawer}
-                        edge="start"
-                        className={classes.menuButton}
-                        color="inherit"
-                        aria-label="open drawer"
-                    >
+                    <IconButton onClick={toggleDrawer} edge="start" className={classes.menuButton} color="inherit" aria-label="open drawer">
                         <img src={dashboardIcon} alt=""/>
                     </IconButton>
                     <Typography className={classes.title} variant="h6" noWrap>
@@ -116,32 +77,18 @@ export default function TopBar({logo,profileImage,username}) {
                     </Typography>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
-
                         <IconButton color="inherit">
                                 <NotificationsIcon style={{color:'grey'}} />
                         </IconButton>
                         <IconButton color="inherit">
                             <img src={settingIcon} alt="icon"/>
                         </IconButton>
-                        <IconButton
-                            edge="end"
-                            aria-label="account of current user"
-                            aria-controls={menuId}
-                            aria-haspopup="true"
-                            onClick={handleProfileMenuOpen}
-                            color="inherit"
-                        >
+                        <IconButton edge="end" aria-label="account of current user" aria-controls={menuId} aria-haspopup="true" onClick={handleProfileMenuOpen} color="inherit">
                             {profileImage?<Avatar  alt={username} src={profileImage}/>:<AccountCircle/>}
                         </IconButton>
                     </div>
                     <div className={classes.sectionMobile}>
-                        <IconButton
-                            aria-label="show more"
-                            aria-controls={mobileMenuId}
-                            aria-haspopup="true"
-                            onClick={handleMobileMenuOpen}
-                            color="inherit"
-                        >
+                        <IconButton aria-label="show more" aria-controls={mobileMenuId} aria-haspopup="true" onClick={handleMobileMenuOpen} color="inherit">
                             <MoreIcon style={{color:"grey"}} />
                         </IconButton>
                     </div>

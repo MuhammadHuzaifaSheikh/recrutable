@@ -1,8 +1,6 @@
 import ApplicationsCard from "./ApplicationCard";
 import './style.css'
 import {Grid} from "@material-ui/core";
-import InfoContainer from "../infoContainer/InfoContainer";
-import {applicantions} from "../../../../../data/applicationsData.json";
 import React from "react";
 export default function Applications({candidatesApplications}) {
     return(
