@@ -41,7 +41,6 @@ export default function PendingApplication() {
             setCandidatesData(currDataCandidate)
         }
     }, [data,type])
-    console.log(candidatesData);
     return(
         <Container   className="PendingApplication_main">
             <Header/>

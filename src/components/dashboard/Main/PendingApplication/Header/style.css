@@ -10,6 +10,7 @@
 }
 .headerLocation_div{
     display: flex;
+    align-items: center;
 }
 .header_website{
     display: flex;
@@ -28,7 +29,7 @@
 .header_website p{
     font-style: normal;
     font-weight: normal;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 180%;
     color: #000000;
 
@@ -41,7 +42,6 @@
 }
 .subLogo img{
     width: 148px;
-    height: 42px;
 
 }
 
