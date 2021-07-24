@@ -12,6 +12,7 @@
       "job_id": "20",
       "ac_manager_approval": "pending"
     },
+
     {
       "id": "3",
       "candidate_id": "1",
@@ -59,6 +60,12 @@
       "candidate_id": "8",
       "job_id": "20",
       "ac_manager_approval": "approved"
+    },
+    {
+      "id": "11",
+      "candidate_id": "14",
+      "job_id": "20",
+      "ac_manager_approval": "requested"
     }
   ]
 }

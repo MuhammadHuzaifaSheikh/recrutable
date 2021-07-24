@@ -10,19 +10,19 @@ const useStyles = makeStyles((theme) => ({
         height: theme.spacing(6),
     },
 }));
-export default function ApplicationsCard() {
+export default function ApplicationsCard({name,designation,profile_img,city,state,country,latest_education_end_year,latest_education,expected_salary,tags}) {
     const classes = useStyles();
 
     return (
         <div className="ApplicationsCard_main">
             <div className="userInfo_Div">
                 <div>
-                    <Avatar className={classes.avatar} alt={"Huzaifa"}
-                            src="https://capital-placement.com/wp-content/uploads/2021/05/Ashiklal-Pyarilal.jpeg"/>
+                    <Avatar className={classes.avatar} alt={name?name:"Name"}
+                            src={profile_img}/>
                 </div>
                 <div className="userInfo_name">
-                    <h2>Moin Khan</h2>
-                    <p>Full Stack web developer</p>
+                    <h2>{name?name:"User Name"}</h2>
+                    <p>{designation?designation:"None"}</p>
                 </div>
             </div>
             <div className="applicationCard_center">
@@ -30,17 +30,17 @@ export default function ApplicationsCard() {
                     <div className="applicationCard_center_div1">
                         <div className="applicationCard_center_general">
                             <img style={{margin: "0 12px", width: 10}} src={LocationIcon} alt="icon"/>
-                            <p>Bangalore Urban, Karnataka, India</p>
+                            <p>{city&&city} {state&&state}, {country&&country}</p>
                         </div>
                         <div className="applicationCard_center_general">
                             <img style={{width: 13}} src={degreeIcon} alt="icon"/>
-                            <p>Education: 2018-2021 - MSc Computer Science </p>
+                            <p>Education: {latest_education_end_year?latest_education_end_year:"0000-0000"} - {latest_education?latest_education:"latest_education"} </p>
                         </div>
                     </div>
                     <div className="applicationCard_center_div2">
                         <div className="applicationCard_center_general">
                             <img style={{width: 14}} src={salaryIcon} alt="icon"/>
-                            <p>Expected Salary: Open to Negotiation </p>
+                            <p>Expected Salary: {expected_salary?expected_salary:"Open to Negotiation"} </p>
                         </div>
                     </div>
                 </div>
@@ -67,16 +67,18 @@ export default function ApplicationsCard() {
             </div>
 
             <div className="tags">
-                <div className="tags1">
-                   <p>HTML</p>
-                   <p>CSS</p>
-                   <p>Bootstrap </p>
-                </div>
-                <div className="tags2">
-                    <p>HTMl</p>
-                    <p>CSS</p>
-                    <p>Bootstrap </p>
-                </div>
+                {/*<div className="tags1">*/}
+                {/*    {tags.sclice(0,2).map((item,index)=>{*/}
+                {/*        return  <p key={index}>{item}</p>*/}
+                {/*    })}*/}
+
+                {/*</div>*/}
+                {/*<div className="tags2">*/}
+                {/*    {tags.sclice(3,5).map((item,index)=>{*/}
+                {/*        return  <p key={index}>{item}</p>*/}
+                {/*    })}*/}
+
+                {/*</div>*/}
             </div>
 
 

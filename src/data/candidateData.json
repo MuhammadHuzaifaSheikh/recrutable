@@ -23,6 +23,27 @@
       ]
     },
     {
+      "id": "14",
+      "first_name": "Huzaifa",
+      "last_name": "Sheikh",
+      "profile_img": "https://scontent.fkhi27-1.fna.fbcdn.net/v/t1.6435-9/137043018_697102287635880_1377173207340703594_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeFXdZnQVo72wqr3s1wVykG3ceWiEN6Zrelx5aIQ3pmt6cs3XeYrgOq5b2vdli7QaYJ9EKqmc7J5exhze9uhQQ1d&_nc_ohc=G8L5rAp-HmEAX-y-hS-&_nc_ht=scontent.fkhi27-1.fna&oh=3c5eb45b18fa17e9b31c1d8515f01db7&oe=6122BB07",
+      "designation": "Backend Developer",
+      "city": "Karachi",
+      "country": "Pakistan",
+      "expected_salary": "Open to Negotiation",
+      "latest_education": "MSc Computer Science",
+      "latest_education_start_year": "2018-2021",
+      "latest_education_end_year": "2018-2021",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery",
+        ".NET Core"
+      ]
+    },
+    {
       "id": "13",
       "first_name": "Andriána",
       "last_name": "Sotirisi",

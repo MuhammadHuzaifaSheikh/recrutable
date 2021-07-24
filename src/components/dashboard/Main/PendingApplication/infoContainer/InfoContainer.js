@@ -1,25 +1,17 @@
 import {Card, CardContent, Typography, useMediaQuery} from "@material-ui/core";
 import {useStyles} from "./style";
-import {useTheme} from "@material-ui/core/styles";
-export default function InfoContainer({active,title,number}) {
-    const theme = useTheme();
+export default function InfoContainer({active,title,number,onClick}) {
     const classes = useStyles();
-
-    const isXs = useMediaQuery(theme.breakpoints.down("xs"));
-
-        return(
+    return(
             <div style={{position:"relative",cursor:'pointer'}}>
-                <Card  style={active?{background:'#ED2147',height:150}:{height:150}}>
+                <Card onClick={onClick} style={active?{background:'#ED2147',height:150}:{height:150}}>
                     <CardContent>
                         <Typography className={active?classes.infoBoxNumberActive:classes.infoBoxNumber}>
-                            {number?number:"NA"}
+                            {number}
                         </Typography>
                         <Typography className={active?classes.infoBox_textActive:classes.infoBox_text}>
                             {title}
                         </Typography>
-
-
-
                     </CardContent>
 
 

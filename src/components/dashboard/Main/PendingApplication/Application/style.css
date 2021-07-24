@@ -92,6 +92,8 @@
 }
 .tags{
     display: flex;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .tags div{
@@ -159,6 +161,8 @@
     .tags{
         display: flex;
         flex-direction: column;
+        padding-left: 0;
+
     }
     .tags2{
         margin-top: 10px;

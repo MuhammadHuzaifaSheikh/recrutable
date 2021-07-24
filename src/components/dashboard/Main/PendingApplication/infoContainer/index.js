@@ -4,35 +4,17 @@ import React, {useEffect, useState} from "react";
 import {useTheme} from "@material-ui/core/styles";
 import {useStyles} from "../../../Topbar/style";
 import {applicantions} from '../../../../../data/applicationsData.json'
-import {candidates} from '../../../../../data/candidateData.json'
+import {setFilterCase} from "../../../../../store/action/action";
+import {useDispatch, useSelector} from "react-redux";
 
-export default function InfoContainerMain() {
+export default function InfoContainerMain({data}) {
+    let {type} = useSelector(({filterCase}) => filterCase);
+
     const theme = useTheme();
+    const dispatch = useDispatch();
     const classes = useStyles();
 
-    const [data, setData] = useState({
-        approved: [],
-        pending: [],
-        rejected: [],
-    })
 
-    const [candidatesData, setCandidatesData] = useState([]);
-
-    useEffect(() => {
-        const approveData = applicantions.filter((curElm) => curElm.ac_manager_approval === "approved")
-        const pendingData = applicantions.filter((curElm) => curElm.ac_manager_approval === "pending")
-        const rejectedData = applicantions.filter((curElm) => curElm.ac_manager_approval === "rejected")
-        setData({approved: approveData, pending: pendingData, rejected: rejectedData})
-    }, [])
-
-    useEffect(() => {
-       data.rejected.forEach((value)=>{
-           console.log(value);
-           const candidateFilter = candidates.filter((curCandidate) => curCandidate.id === value.candidate_id);
-           console.log(candidateFilter);
-       })
-
-    }, [data])
 
     const isXs = useMediaQuery(theme.breakpoints.down("xs"));
     return (
@@ -41,26 +23,26 @@ export default function InfoContainerMain() {
                 <Grid item sm={8} xs={12}>
                     <Grid container spacing={isXs ? 5 : 0}>
                         <Grid item xs={12} sm={12} md={3}>
-                            <InfoContainer number={applicantions.length} title="Total Application"/>
+                            <InfoContainer active={type==="all"} onClick={()=>dispatch(setFilterCase('all'))} number={applicantions.length} title="Total Application"/>
                         </Grid>
                         <Grid item xs={12} sm={12} md={3}>
-                            <InfoContainer active title="Shortlisted by you "/>
+                            <InfoContainer  active={type==='shortListed'} onClick={()=>dispatch(setFilterCase('shortListed'))}   number={data.shortListed.length}  title="Shortlisted by you "/>
                         </Grid>
                         <Grid item xs={12} sm={12} md={3}>
-                            <InfoContainer number={data.pending.length} title="Pending Application"/>
+                            <InfoContainer active={type==="pending"} onClick={()=>dispatch(setFilterCase('pending'))} number={data.pending.length} title="Pending Application"/>
                         </Grid>
                         <Grid item xs={12} sm={12} md={3}>
-                            <InfoContainer number={data.rejected.length} title="Rejected"/>
+                            <InfoContainer active={type==="rejected"} onClick={()=>dispatch(setFilterCase('rejected'))} number={data.rejected.length} title="Rejected"/>
                         </Grid>
                     </Grid>
                 </Grid>
                 <Grid item sm={4} xs={12}>
                     <Grid container spacing={isXs ? 5 : 0}>
                         <Grid item xs={12} sm={12 } md={6}>
-                            <InfoContainer title="Employee Requested"/>
+                            <InfoContainer active={type==="requested"} onClick={()=>dispatch(setFilterCase('requested'))} number={data.requested.length} title="Employee Requested"/>
                         </Grid>
                         <Grid item xs={12} sm={12} md={6}>
-                            <InfoContainer number={data.approved.length} title="Approved"/>
+                            <InfoContainer active={type==="approved"} onClick={()=>dispatch(setFilterCase('approved'))} number={data.approved.length} title="Approved"/>
                         </Grid>
                     </Grid>
                 </Grid>
