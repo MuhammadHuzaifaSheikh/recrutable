@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9deb48f6.chunk.css",
+    "main.js": "/static/js/main.1d3b6bf5.chunk.js",
+    "main.js.map": "/static/js/main.1d3b6bf5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b4854b5e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b4854b5e.js.map",
+    "static/js/2.3437dcc7.chunk.js": "/static/js/2.3437dcc7.chunk.js",
+    "static/js/2.3437dcc7.chunk.js.map": "/static/js/2.3437dcc7.chunk.js.map",
+    "static/js/3.d6a72c6e.chunk.js": "/static/js/3.d6a72c6e.chunk.js",
+    "static/js/3.d6a72c6e.chunk.js.map": "/static/js/3.d6a72c6e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.9deb48f6.chunk.css.map": "/static/css/main.9deb48f6.chunk.css.map",
+    "static/js/2.3437dcc7.chunk.js.LICENSE.txt": "/static/js/2.3437dcc7.chunk.js.LICENSE.txt",
+    "static/media/LOGO.df10fc93.png": "/static/media/LOGO.df10fc93.png",
+    "static/media/ViewJobsIcon.294c2a22.svg": "/static/media/ViewJobsIcon.294c2a22.svg",
+    "static/media/allCandidedades.3adf219f.svg": "/static/media/allCandidedades.3adf219f.svg",
+    "static/media/assignCompanies.d323eb0a.svg": "/static/media/assignCompanies.d323eb0a.svg",
+    "static/media/dashBoardIcon.47becf73.svg": "/static/media/dashBoardIcon.47becf73.svg",
+    "static/media/pendingApproval.7b0caae2.svg": "/static/media/pendingApproval.7b0caae2.svg",
+    "static/media/settingIcon.ada781bb.svg": "/static/media/settingIcon.ada781bb.svg",
+    "static/media/sidebarMainDashboardIcon.1369fb49.svg": "/static/media/sidebarMainDashboardIcon.1369fb49.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4854b5e.js",
+    "static/js/2.3437dcc7.chunk.js",
+    "static/css/main.9deb48f6.chunk.css",
+    "static/js/main.1d3b6bf5.chunk.js"
+  ]
+}
