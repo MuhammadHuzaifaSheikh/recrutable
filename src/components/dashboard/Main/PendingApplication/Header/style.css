@@ -45,7 +45,7 @@
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .header_heading{
         display: flex;
         flex-direction: column;

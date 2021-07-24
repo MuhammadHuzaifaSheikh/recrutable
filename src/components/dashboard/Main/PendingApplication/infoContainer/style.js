@@ -7,7 +7,10 @@ export const useStyles = makeStyles((theme) => ({
     infoBoxNumber: {
         fontStyle: 'normal',
         fontWeight: 600,
-        fontSize: 50,
+        fontSize: theme.spacing(7),
+        [theme.breakpoints.down('md')]: {
+            fontSize: theme.spacing(5),
+        },
         lineHeight: ' 180%',
         textAlign: 'center',
         color: '#ED2147'
@@ -15,7 +18,10 @@ export const useStyles = makeStyles((theme) => ({
     infoBoxNumberActive: {
         fontStyle: 'normal',
         fontWeight: 600,
-        fontSize: 50,
+        fontSize: theme.spacing(7),
+        [theme.breakpoints.down('md')]: {
+            fontSize: theme.spacing(5),
+        },
         lineHeight: ' 180%',
         textAlign: 'center',
         color: '#fff'
@@ -46,7 +52,8 @@ export const useStyles = makeStyles((theme) => ({
         borderTop: '30px solid #ED2147',
         borderLeft: '31px solid transparent',
         borderRight: ' 31px solid transparent',
-    }
+
+}
 
 
 }));

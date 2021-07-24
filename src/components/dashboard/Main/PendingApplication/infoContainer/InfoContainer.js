@@ -9,10 +9,10 @@ export default function InfoContainer({active,title,number}) {
 
         return(
             <div style={{position:"relative",cursor:'pointer'}}>
-                <Card style={active?{background:'#ED2147'}:{}} className="infoBox_main">
+                <Card  style={active?{background:'#ED2147',height:150}:{height:150}}>
                     <CardContent>
                         <Typography className={active?classes.infoBoxNumberActive:classes.infoBoxNumber}>
-                            {number?number:'NA'}
+                            {number?number:"NA"}
                         </Typography>
                         <Typography className={active?classes.infoBox_textActive:classes.infoBox_text}>
                             {title}

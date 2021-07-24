@@ -3,12 +3,17 @@ import React from "react";
 import InfoContainerMain from './infoContainer/index'
 import './style.css'
 import Header from "./Header/Header";
+import Applications from "./Application";
 export default function PendingApplication() {
 
     return(
         <Container   className="PendingApplication_main">
             <Header/>
-           <InfoContainerMain/>
+            <div className="pendingApplication_content">
+                <InfoContainerMain/>
+                <Applications/>
+
+            </div>
         </Container>
     )
 }

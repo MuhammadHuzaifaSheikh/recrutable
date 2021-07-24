@@ -40,26 +40,26 @@ export default function InfoContainerMain() {
             <Grid container spacing={isXs ? 5 : 3}>
                 <Grid item sm={8} xs={12}>
                     <Grid container spacing={isXs ? 5 : 0}>
-                        <Grid item xs={12} sm={3}>
+                        <Grid item xs={12} sm={12} md={3}>
                             <InfoContainer number={applicantions.length} title="Total Application"/>
                         </Grid>
-                        <Grid item xs={12} sm={3}>
+                        <Grid item xs={12} sm={12} md={3}>
                             <InfoContainer active title="Shortlisted by you "/>
                         </Grid>
-                        <Grid item xs={12} sm={3}>
+                        <Grid item xs={12} sm={12} md={3}>
                             <InfoContainer number={data.pending.length} title="Pending Application"/>
                         </Grid>
-                        <Grid item xs={12} sm={3}>
+                        <Grid item xs={12} sm={12} md={3}>
                             <InfoContainer number={data.rejected.length} title="Rejected"/>
                         </Grid>
                     </Grid>
                 </Grid>
                 <Grid item sm={4} xs={12}>
                     <Grid container spacing={isXs ? 5 : 0}>
-                        <Grid item xs={12} sm={6}>
+                        <Grid item xs={12} sm={12 } md={6}>
                             <InfoContainer title="Employee Requested"/>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid item xs={12} sm={12} md={6}>
                             <InfoContainer number={data.approved.length} title="Approved"/>
                         </Grid>
                     </Grid>
