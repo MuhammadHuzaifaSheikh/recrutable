@@ -90,6 +90,30 @@
     margin:20px;
     width: 70%;
 }
+.tags{
+    display: flex;
+}
+
+.tags div{
+    display: flex;
+}
+.tags p{
+    height: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    color: #333333;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0 10px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    background: #E0E0E0;
+    border-radius: 4px;
+}
 
 @media (max-width: 1200px){
     .applicationCard_center_firstDiv{
@@ -131,6 +155,13 @@
     .divider{
         width: 90%;
         margin: 20px;
+    }
+    .tags{
+        display: flex;
+        flex-direction: column;
+    }
+    .tags2{
+        margin-top: 10px;
     }
 
 

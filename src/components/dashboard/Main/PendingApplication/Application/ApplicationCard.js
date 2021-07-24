@@ -68,10 +68,14 @@ export default function ApplicationsCard() {
 
             <div className="tags">
                 <div className="tags1">
-
+                   <p>HTML</p>
+                   <p>CSS</p>
+                   <p>Bootstrap </p>
                 </div>
                 <div className="tags2">
-                    
+                    <p>HTMl</p>
+                    <p>CSS</p>
+                    <p>Bootstrap </p>
                 </div>
             </div>
 
