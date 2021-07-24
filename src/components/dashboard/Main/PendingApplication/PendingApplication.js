@@ -31,7 +31,7 @@ export default function PendingApplication() {
 
     useEffect(() => {
         let currDataCandidate = []
-        if (type==='all') setCandidatesData(candidates)
+        if (type==='total') setCandidatesData(candidates)
         else if (type==='shortListed')  setCandidatesData([])
         else {
             data[type].forEach((value)=>{

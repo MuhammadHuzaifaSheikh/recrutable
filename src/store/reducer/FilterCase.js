@@ -1,7 +1,7 @@
 import {Filter_Case} from '../constant/ActionTypes';
 
 const INITIAL_STATE = {
-    type: 'all',
+    type: 'total',
 };
 
 

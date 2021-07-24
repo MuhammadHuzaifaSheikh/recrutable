@@ -2,11 +2,14 @@ import ApplicationsCard from "./ApplicationCard";
 import './style.css'
 import {Grid} from "@material-ui/core";
 import React from "react";
+import {useSelector} from "react-redux";
 export default function Applications({candidatesApplications}) {
+    let {type} = useSelector(({filterCase}) => filterCase);
+
     return(
         <div className="Applications_main">
             <div className="applicationContainer_heading">
-                <h2>Pending Applications</h2>
+                <h2> {type} Applications</h2>
             </div>
             <Grid container spacing={3}>
                 {candidatesApplications.map((item,index)=>{

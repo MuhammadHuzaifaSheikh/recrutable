@@ -9,6 +9,7 @@
     line-height: 32px;
     letter-spacing: -0.019em;
     color: #A2A2A2;
+    text-transform: capitalize;
 
 }
 .ApplicationsCard_main{
